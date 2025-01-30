@@ -7,6 +7,7 @@ datasource db {
   provider     = "postgresql"
   url          = env("DATABASE_URL")
   relationMode = "prisma"
+  directUrl    = env("DIRECT_DATABASE_URL")
 }
 
 model User {
@@ -220,5 +221,3 @@ model Report {
   @@index([name])
   @@map("report")
 }
-
-directUrl = env("DIRECT_DATABASE_URL")
